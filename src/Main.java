@@ -16,9 +16,10 @@ public class Main {
             return "Invalid Value";
         }
         System.out.println("Your time : " + minutes + " minutes " + seconds + "seconds"); //printing declarated time
+        if(seconds > 59)
         minutes = minutes+ ((int)seconds/60);
         int hours = minutes / 60; //how many hours is in your declarated minutes time
-        int remainingseconds = seconds % 60;
+        int remainingseconds = seconds % 60; // taking remaining seconds from full minutes
         int remainingminutes = minutes % 60; // taking remaining minutes from full hours
         return getDurationString(hours, remainingminutes, remainingseconds);
 
