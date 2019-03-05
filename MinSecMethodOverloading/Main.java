@@ -9,7 +9,7 @@ public class Main {
         int seconds = scan.nextInt();
         System.out.println(getDurationString(minutes, seconds));
     }
-    public static String getDurationString(int minutes, int seconds)
+    private static String getDurationString(int minutes, int seconds)
     {
         if ( minutes < 0 || seconds < 0 )  //validation
         {
@@ -26,7 +26,7 @@ public class Main {
 
     }
 
-    public static String getDurationString (int hour, int minute, int second)
+    private static String getDurationString (int hour, int minute, int second)
     {
         String hours = toPrintFormating(hour); //taking hour to string
         String minutes = toPrintFormating(minute);
@@ -34,7 +34,7 @@ public class Main {
         return ("Your formated times is equal to: " + hours + "h " + minutes + "m " + seconds + "s" );
     }
 
-    public static String toPrintFormating(int number)
+    private static String toPrintFormating(int number)
     {
         String formated;
         if(number >= 9) //validation of digits
